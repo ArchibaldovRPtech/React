@@ -8,7 +8,7 @@ let messages = ['Привет', 'React'];
 
 
 
-const MessageComponent = (props) => <div>{props.text}</div>;
+const MessageComponent = (props) => <div className="message-item"><span>{props.text}</span></div>;
 const Button = (props) => <button onClick={addMessage}>отправить</button>;
 
 const MessageField = (props) => {
@@ -30,7 +30,7 @@ function addMessage() {
 	// messages.push(userText.value);
 	messages.push('hello');
 	ReactDom.render(
-		<div>
+		<div className="chat">
 			<MessageField messages={messages} />
 			<Button></Button>
 		</div>
@@ -44,7 +44,7 @@ function rend() {
 
 };
 ReactDom.render(
-	<div>
+	<div className="chat">
 		<MessageField messages={messages} />
 		<Button></Button>
 	</div>
